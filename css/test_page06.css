@@ -201,15 +201,9 @@
   position: relative;
   padding: 16px 20px 0;
   border-bottom: 1px solid #f8f8f8;
-  /* padding-bottom: 200px; */
+  padding-bottom: 100px;
 }
-.smt-term-wrap::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 80px;
-  background: #fff;
-}
+
 /* .smt-term-wrap .smt-term-list {
   margin-bottom: 70px;
 } */
