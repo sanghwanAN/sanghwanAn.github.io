@@ -195,7 +195,6 @@
 
 /*********** s: 이용약관(팝업) .smt-term-wrap ***********/
 .smt-term-wrap {
-  display: inline-block;
   width: 100%;
   min-height: 100%;
   position: relative;
