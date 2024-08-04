@@ -6002,11 +6002,6 @@
         var headerHH = $(".header").height();
         var windowHeight = $(window).height();
 
-        targetFixedEle.css({
-          transition: "none",
-          "will-change": "top",
-        });
-
         if (Math.abs(st - lastScrollTop) > scrollThreshold) {
           if (st >= tabStr - 61 && st < tabEnd - 61) {
             targetFixedEle.addClass("fixed");
