@@ -59,12 +59,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translateY(-84px); /* 위치 조정 */
+        transform: translateY(0); /* 위치 조정 */
+        will-change: transform;
       }
       .stroe_date.fixed {
         position: fixed;
         top: 0; /* 필요한 값으로 설정 */
-        transform: translateY(0); /* 위치 조정 */
+        transform: translateY(61px); /* 위치 조정 */
         z-index: 10;
       }
       .stroe_date > div {
@@ -6009,11 +6010,11 @@
         if (Math.abs(st - lastScrollTop) > scrollThreshold) {
           if (st >= tabStr - 61 && st < tabEnd - 61) {
             targetFixedEle.addClass("fixed");
-            targetFixedEle.css("transform", "translateY(" + 61 + "px)");
+            // targetFixedEle.css("transform", "translateY(" + 61 + "px)");
             tabEle.addClass("stroe_date_fixed");
           } else {
             targetFixedEle.removeClass("fixed");
-            targetFixedEle.css("transform", "translateY(" + 0 + ")");
+            // targetFixedEle.css("transform", "translateY(" + 0 + ")");
             tabEle.removeClass("stroe_date_fixed");
           }
         }
