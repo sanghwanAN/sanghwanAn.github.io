@@ -5991,20 +5991,20 @@
         var tabEndHH = $(".event_img_area2").height();
         var headerHH = $(".header").height();
         var windowHeight = $(window).height();
-        console.log("st___", st);
-        console.log("lastScrollTop___", lastScrollTop);
-        console.log("targetFixedEleOffset - 60 ___", targetFixedEleOffset - 60);
-        console.log(
-          "tabEnd - targetFixedHeight - 60___",
-          tabEnd - targetFixedHeight - 60
-        );
+
+        targetFixedEle.css({
+          transition: "none",
+          "will-change": "top",
+        });
 
         if (Math.abs(st - lastScrollTop) > scrollThreshold) {
-          if (st >= tabStr - 60 && st < tabEnd - 60) {
+          if (st >= tabStr - 61 && st < tabEnd - 61) {
             targetFixedEle.addClass("fixed");
+            targetFixedEle.css("top", 61 + "px");
             tabEle.addClass("stroe_date_fixed");
           } else {
             targetFixedEle.removeClass("fixed");
+            targetFixedEle.css("top", "0");
             tabEle.removeClass("stroe_date_fixed");
           }
         }
