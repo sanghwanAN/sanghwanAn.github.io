@@ -1354,6 +1354,10 @@
   /* padding-bottom: 80px; */
   height: calc(100vh - 140px);
 } /* 스크롤 이슈 대응 2024-09-11 */
+.box-bottom-float.order_hoeny_popup .download-coupon {
+  overflow: hidden;
+  background: red;
+}
 .box-bottom-float.order_hoeny_popup .area-scroll .accumulated-money-list {
   display: inline-block;
   width: 100%;
