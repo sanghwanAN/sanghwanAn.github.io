@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0093)https://devcdn.hddfs.com/front-dev3/M_KO_mockup/smart_duty/order/smt_discount_detail_pop.html -->
+<!-- saved from url=(0082)https://devcdn.hddfs.com/front-dev3/M_KO_mockup/smart_duty/join/smt_pop_alert.html -->
 <html lang="ko">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title>test-site</title>
+    <title>현대면세점</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
@@ -15,6 +15,11 @@
     <script src="../js/test_common.js"></script>
     <link rel="stylesheet" href="../css/test_common03.css" />
     <link rel="stylesheet" href="../css/test_page09.css" />
+    <style>
+      .btn-border-smt {
+        height: auto;
+      }
+    </style>
     <style id="gridman-extension-fonts">
       @font-face {
         font-display: auto;
@@ -25,545 +30,361 @@
           format("truetype");
       }
     </style>
-
-    <style>
-      .btn-border-smt:focus {
-        color: red !important;
-      }
-    </style>
   </head>
-  <body class="popup-open" cz-shortcut-listen="true">
+
+  <body cz-shortcut-listen="true" class="">
     <!-- .smt-duty-wrap -->
     <div class="smt-duty-wrap">
       <!-- 헤더(.smt-header) -->
       <header class="smt-header">
         <div class="header_top">
           <a
-            href="https://devcdn.hddfs.com/front-dev3/M_KO_mockup/smart_duty/order/smt_discount_detail_pop.html#none"
+            href="https://devcdn.hddfs.com/front-dev3/M_KO_mockup/smart_duty/join/smt_pop_alert.html#none"
             class="history_back"
             >history back</a
           >
-          <h2>회원가입</h2>
+          <h2>현대면세점 회원가입</h2>
         </div>
       </header>
       <!-- //헤더(.smt-header) -->
 
       <!-- .smart-duty-cont-wrap -->
-      <div class="smart-duty-cont-wrap"></div>
+      <div class="smart-duty-cont-wrap">
+        <!-- 알럿 팝업 확인용-->
+        <div style="padding: 20px; display: flex; flex-wrap: wrap; gap: 6px">
+          <!-- 팝업 버튼에 .btn-js-open-smt-pop 추가, 열어야되는 팝업 아이디 data-pop-target="" 에 적용 -->
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop01"
+          >
+            비밀번호 5회 초과 팝업
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop02"
+          >
+            로그인후 3차 재인증 성공
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop03"
+          >
+            로그인후 3차 재인증 실패
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop04"
+          >
+            2차재인증시 일치된 회원이 중복인경우
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop04en"
+          >
+            2차재인증시 일치된 회원이 중복인경우<br />EN 전화번호
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop04cn"
+          >
+            2차재인증시 일치된 회원이 중복인경우<br />CN 전화번호
+          </button>
+          <button
+            type="button"
+            class="btn-js-open-smt-pop btn-border-smt"
+            data-pop-target="alertPop05"
+          >
+            약관동의하지않고 회원가입버튼 누를 때
+          </button>
+          <!-- //팝업 버튼에 .btn-js-open-smt-pop 추가, 열어야되는 팝업 아이디 data-pop-target="" 에 적용 -->
+        </div>
+        <!-- //알럿 팝업 확인용-->
+      </div>
       <!-- //.smart-duty-cont-wrap -->
     </div>
     <!-- //.smt-duty-wrap -->
 
+    <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
     <!-- 팝업 -->
-    <!-- .smt-pop -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
     <div
-      class="js-smt-pop-wrap smt-pop smt-pop--full smt-pop-open"
-      id="paymentPop"
-      aria-hidden="false"
+      class="js-smt-pop-wrap smt-alert-pop"
+      id="alertPop01"
+      aria-hidden="true"
     >
       <!-- .smt-pop__inner -->
-      <div class="smt-pop__inner">
-        <!-- .smtpop-body -->
-        <div class="smtpop-body">
-          <!-- .smt-pop__header -->
-          <div class="smt-pop__header">
-            <p class="smt-pop__tit">test---</p>
-          </div>
-          <!-- //.smt-pop__header -->
-
-          <!-- .smt-pop-cont -->
-          <div class="smt-pop-cont">
-            <!-- .smt-pop-cont__inner -->
-            <div class="smt-pop-cont__inner">
-              <!-- 고고고내역 .discount-detail-wrap -->
-              <div class="discount-detail-wrap">
-                <!-- .discount-pop-sec -->
-                <div class="discount-pop-sec">
-                  <div class="discount-pop-sec__header">
-                    <p class="discount-pop-sec__tit">고고고 혜택</p>
-                  </div>
-                  <div class="discount-pop-sec__accordion">
-                    <div class="smt-accordion">
-                      <div class="smt-accordion__item">
-                        <div class="smt-accordion__tit">
-                          <span class="smt-accordion__label"
-                            >예상 최대 혜택</span
-                          >
-                          <!-- .js-accordion-btn , aria-controls에 해당 아코디언컨텐츠 ID 연결 -->
-                          <button
-                            class="accordion-btn js-accordion-btn"
-                            aria-expanded="true"
-                            aria-controls="section2"
-                          >
-                            <span class="smt-accordion__dollar">-92,404원</span>
-                            <span class="smt-accordion__money">(96,500원)</span>
-                          </button>
-                          <!-- //.js-accordion-btn -->
-                        </div>
-                        <!-- .js-accordion-cont 아코디언 버튼에 aria-controls 값을 아이디에 연결-->
-                        <div
-                          class="smt-accordion__cont js-accordion-cont"
-                          id="section2"
-                          role="region"
-                          aria-hidden="false"
-                          style="display: block"
-                        >
-                          <!-- .smt-detail-list-wrap -->
-                          <div class="smt-detail-list-wrap">
-                            <ul class="smt-detail-list">
-                              <li>
-                                <div class="smt-detail-list__left">
-                                  <p>상품고고고</p>
-                                </div>
-                                <div class="smt-detail-list__right">
-                                  <p>$16 (20,800원)</p>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="smt-detail-list__left">
-                                  <p>묶음고고고</p>
-                                </div>
-                                <div class="smt-detail-list__right">
-                                  <p>$3.20 (4,160원)</p>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="smt-detail-list__left">
-                                  <p>회원고고고</p>
-                                </div>
-                                <div class="smt-detail-list__right">
-                                  <p>$1 (1,300원)</p>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="smt-detail-list__left">
-                                  <p>고고고멤버십 고고고</p>
-                                </div>
-                                <div class="smt-detail-list__right">
-                                  <p>$16 (20,800원)</p>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="smt-detail-list__left">
-                                  <p>선불카드</p>
-                                </div>
-                                <div class="smt-detail-list__right">
-                                  <p>50,000원</p>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                          <!-- //.smt-detail-list-wrap -->
-                        </div>
-                        <!-- //.js-accordion-cont -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- //.discount-pop-sec -->
-
-                <!-- .discount-pop-sec -->
-                <div class="discount-pop-sec mileage-sec">
-                  <!-- discount-pop-sec__tooltip, .s-exclamation-toolip-wrap 추가 -->
-                  <div
-                    class="discount-pop-sec__tooltip js-exclamation-toolip-wrap"
-                  >
-                    <p class="smt-toolip-tit">2222</p>
-                    <!-- .js-btn-exclamation-toolip 추가 -->
-                    <button
-                      type="button"
-                      class="btn-smt-tooltip js-btn-exclamation-toolip"
-                    >
-                      <span class="hide">툴팁버튼</span>
-                    </button>
-                    <!-- //.js-btn-exclamation-toolip 추가 -->
-                    <div class="smt-toolip">
-                      <div class="smt-toolip__inner">
-                        <div class="smt-toolip__cont">
-                          <ul class="smt-toolip-lst">
-                            <li>
-                              2222을 위해 개인정보 수집/이용 동의 및 제 3자 제공
-                              동의가 필요합니다.
-                            </li>
-                            <li>
-                              2222을 위한 스카이패스 회원번호 및 영문성명은
-                              대한항공 홈페이지에서 확인하실 수 있습니다.
-                            </li>
-                          </ul>
-                        </div>
-                        <button type="button" class="btn-smt-tooltip-close">
-                          <span class="hide">툴팁닫기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- //discount-pop-sec__tooltip .js-exclamation-toolip-wrap -->
-
-                  <!-- .skypass-mileage -->
-                  <div class="skypass-mileage">
-                    <!-- .skypass-mileage__header -->
-                    <div class="skypass-mileage__header">
-                      <p class="skypass-mileage__tit">
-                        마일리지 적립을 위해 본인 회원번호 입력을 해주세요.
-                      </p>
-                    </div>
-                    <!-- //.skypass-mileage__header -->
-
-                    <!-- .discount-pop-sec__accordion -->
-                    <div class="skypass-mileage__accordion">
-                      <!-- .agree-accordion -->
-                      <div class="agree-accordion">
-                        <div class="agree-accordion__item">
-                          <div class="agree-accordion__tit">
-                            <span class="smt-checkbox">
-                              <input type="checkbox" name="" id="agree01" />
-                              <label for="agree01" class="allcheck-label"
-                                >개인정보 수집 이용에 동의합니다.</label
-                              >
-                            </span>
-                            <!-- .js-accordion-btn , aria-controls에 해당 아코디언컨텐츠 ID 연결 -->
-                            <button
-                              class="accordion-btn js-accordion-btn"
-                              aria-expanded="false"
-                              aria-controls="agree-accordion01"
-                            >
-                              <span class="hide">아코디언 버튼</span>
-                            </button>
-                            <!-- //.js-accordion-btn -->
-                          </div>
-                          <!-- .js-accordion-cont 아코디언 버튼에 aria-controls 값을 아이디에 연결-->
-                          <div
-                            class="agree-accordion__cont js-accordion-cont"
-                            id="agree-accordion01"
-                            role="region"
-                            aria-hidden="true"
-                          >
-                            <!-- .agree-accordion-cont -->
-                            <div class="agree-accordion-cont">
-                              <div class="agree-accordion-cont__inner">
-                                <ul class="agree-dtail-lst">
-                                  <li>
-                                    수집/이용 목적 : 대한항공 스카이패스
-                                    마일리지 적립 및 CS응대
-                                  </li>
-                                  <li>
-                                    수집/이용 항목 : 스카이패스 회원번호,
-                                    영문성명
-                                  </li>
-                                  <li>보유 및 이용기간 : 회원 탈퇴 시 까지</li>
-                                  <li>
-                                    고객님께서는 개인정보 수집/이용에 동의 거부
-                                    권리가 있으며 동의 거부 시 대한항공
-                                    스카이패스 마일리지 적립이 제한됩니다.
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- //.agree-accordion-cont -->
-                          </div>
-                          <!-- //.js-accordion-cont -->
-                        </div>
-                        <div class="agree-accordion__item">
-                          <div class="agree-accordion__tit">
-                            <span class="smt-checkbox">
-                              <input type="checkbox" name="" id="agree02" />
-                              <label for="agree02" class="allcheck-label"
-                                >개인정보 제3자 제공에 동의합니다.</label
-                              >
-                            </span>
-                            <!-- .js-accordion-btn , aria-controls에 해당 아코디언컨텐츠 ID 연결 -->
-                            <button
-                              class="accordion-btn js-accordion-btn"
-                              aria-expanded="false"
-                              aria-controls="agree-accordion02"
-                            >
-                              <span class="hide">아코디언 버튼</span>
-                            </button>
-                            <!-- //.js-accordion-btn -->
-                          </div>
-                          <!-- .js-accordion-cont 아코디언 버튼에 aria-controls 값을 아이디에 연결-->
-                          <div
-                            class="agree-accordion__cont js-accordion-cont"
-                            id="agree-accordion02"
-                            role="region"
-                            aria-hidden="true"
-                          >
-                            <!-- .agree-accordion-cont -->
-                            <div class="agree-accordion-cont">
-                              <div class="agree-accordion-cont__inner">
-                                <ul class="agree-dtail-lst">
-                                  <li>
-                                    수집/이용 목적 : 대한항공 스카이패스
-                                    마일리지 적립 및 CS응대
-                                  </li>
-                                  <li>
-                                    수집/이용 항목 : 스카이패스 회원번호,
-                                    영문성명
-                                  </li>
-                                  <li>보유 및 이용기간 : 회원 탈퇴 시 까지</li>
-                                  <li>
-                                    고객님께서는 개인정보 수집/이용에 동의 거부
-                                    권리가 있으며 동의 거부 시 대한항공
-                                    스카이패스 마일리지 적립이 제한됩니다.
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <!-- //.agree-accordion-cont -->
-                          </div>
-                          <!-- //.js-accordion-cont -->
-                        </div>
-                      </div>
-                      <!-- //.agree-accordion -->
-                    </div>
-                    <!-- //.discount-pop-sec__accordion -->
-
-                    <!-- .skypass-mileage__join-number -->
-                    <div class="skypass-mileage__join-number">
-                      <div class="skypass-mileage-input-wrap">
-                        <!-- 인풋 에러 : .input-error 추가 , .input-error-msg 노출 -->
-                        <input
-                          type="text"
-                          placeholder="스카이패스 회원번호(12자리 숫자)"
-                          class="skypass-mileage__input input-error"
-                        />
-                        <!-- //인풋 에러 .input-error 추가 -->
-                        <p class="input-error-msg">에러메시지가 노출됩니다.</p>
-                      </div>
-                    </div>
-                    <!-- //.skypass-mileage__join-number -->
-
-                    <!-- .smt-btn-wrap -->
-                    <div class="smt-btn-wrap">
-                      <button type="button" class="btn-bg-smt">
-                        회원번호 작성 완료
-                      </button>
-                    </div>
-                    <!-- //.smt-btn-wrap -->
-
-                    <!-- 유의사항 .smt-attention -->
-                    <div class="smt-attention">
-                      <div class="smt-attention__inner">
-                        <p class="smt-attention__tit">유의사항</p>
-                        <ul class="smt-attention__lst">
-                          <li>
-                            스카이패스 마일리지 적립은 당사 회원 중 내국인(KOR)
-                            개인 고객에 한하여 가능합니다.
-                          </li>
-                          <li>
-                            스카이패스 마일리지는 영수증/교환권별 실결제금액
-                            기준으로 적립되며, 적립은 인도완료일 기준으로 최대
-                            8주 소요됩니다.
-                          </li>
-                          <li>
-                            실결제금액 : 고고고(멤버십, 쿠폰 등), 선불카드,
-                            H.Point, 플러스포인트 등 판촉결제수단을 제외한 실제
-                            고객이 지불한 금액
-                          </li>
-                          <li>미인도시 마일리지 적립은 취소됩니다.</li>
-                          스마트면세 상품 구매시 교환권별로 적립됩니다.
-                          <li>
-                            실결제금액 $100 이상 결제시, $5당 1마일리지 기준으로
-                            $5단위로 절사되어 적립됩니다. (예시 : $104 결제시,
-                            20마일리지 적립)
-                          </li>
-                          <li>
-                            CHANEL, LOUIS VUITTON, CELINE, TIFFANY, 젠틀몬스터
-                            등 일부 브랜드에서 마일리지 적립이 불가합니다.
-                          </li>
-                          <li>
-                            본인 스카이패스 회원번호에 한하여 적립이 가능합니다.
-                          </li>
-                          <li>
-                            스카이패스 마일리지 적립시 본인 여권의 영문명과
-                            스카이패스 회원 가입시 등록된 영문명 전체 스펠링이
-                            일치하는 경우에만 적립이 가능합니다.
-                          </li>
-                          <li>
-                            스카이패스 영문명 확인은 대한항공 홈페이지를 통해
-                            확인 가능합니다.
-                          </li>
-                          <li>
-                            스카이패스 마일리지 적립은 결제 이후 또는 인도
-                            완료후 적립은 불가하오니, 결제 전에 확인해주시기
-                            바랍니다.
-                          </li>
-                          <li>
-                            스카이패스 마일리지 적립을 위해 스카이패스
-                            회원번호를 직원에게 제시 및 정보 제공 동의 절차가
-                            필요합니다.
-                          </li>
-                          <li>
-                            적립된 스카이패스 마일리지는 대한항공 홈페이지 또는
-                            모바일앱을 통해 확인이 가능합니다.
-                          </li>
-                          <li>
-                            적립된 스카이패스 마일리지는 현금 환급이 불가합니다.
-                          </li>
-                          <li>
-                            스마트면세에서 결제한 스카이패스 적립 예상
-                            마일리지는 매장방문 후 직원에게 문의시 확인
-                            가능합니다.
-                          </li>
-                          <li>
-                            본 이벤트는 회사 사정에 의해 사전 공지 없이
-                            변경되거나 종료될 수 있습니다.
-                          </li>
-                          <li>현대백화점면세점 고객센터 : 1811-6688</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <!-- //유의사항 .smt-attention -->
-                  </div>
-                  <!-- //.skypass-mileage -->
-                </div>
-                <!-- //.discount-pop-sec -->
-
-                <!-- .discount-pop-sec -->
-                <div
-                  class="discount-pop-sec mileage-completion-sec"
-                  style="display: none"
-                >
-                  <!-- discount-pop-sec__tooltip, .s-exclamation-toolip-wrap 추가 -->
-                  <div
-                    class="discount-pop-sec__tooltip js-exclamation-toolip-wrap"
-                  >
-                    <p class="smt-toolip-tit">2222</p>
-                    <!-- .js-btn-exclamation-toolip 추가 -->
-                    <button
-                      type="button"
-                      class="btn-smt-tooltip js-btn-exclamation-toolip"
-                    >
-                      <span class="hide">툴팁버튼</span>
-                    </button>
-                    <!-- //.js-btn-exclamation-toolip 추가 -->
-                    <div class="smt-toolip">
-                      <div class="smt-toolip__inner">
-                        <div class="smt-toolip__cont">
-                          <ul class="smt-toolip-lst">
-                            <li>
-                              2222을 위해 개인정보 수집/이용 동의 및 제 3자 제공
-                              동의가 필요합니다.
-                            </li>
-                            <li>
-                              2222을 위한 스카이패스 회원번호 및 영문성명은
-                              대한항공 홈페이지에서 확인하실 수 있습니다.
-                            </li>
-                          </ul>
-                        </div>
-                        <button type="button" class="btn-smt-tooltip-close">
-                          <span class="hide">툴팁닫기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- //discount-pop-sec__tooltip .js-exclamation-toolip-wrap -->
-                  <!-- .skypass-mileage-completion -->
-                  <div class="skypass-completion">
-                    <div class="skypass-completion__header">
-                      <p class="skypass-completion__number">
-                        SKYPASS <span>123456789012</span>
-                      </p>
-                      <span class="skypass-completion__icon"></span>
-                    </div>
-                    <!-- .smt-btn-wrap -->
-                    <div class="smt-btn-wrap">
-                      <button type="button" class="btn-bg-smt">변경</button>
-                      <button type="button" class="btn-border-smt">삭제</button>
-                    </div>
-                    <!-- //.smt-btn-wrap -->
-                  </div>
-                  <!-- //.skypass-mileage-completion -->
-                </div>
-                <!-- //.discount-pop-sec -->
-
-                <!-- 결제 혜택 .benefit-pay-sec -->
-                <div class="benefit-pay-sec discount-pop-sec">
-                  <div class="benefit-pay-sec__header">
-                    <p class="benefit-pay-sec__tit">
-                      예약 결제 시 카드 결제 혜택
-                    </p>
-                  </div>
-                  <ul class="smt-benefit-lst">
-                    <li>
-                      <span class="smt-badge">혜택</span>
-                      <p class="smt-benefit-lst__txt">
-                        [신한카드] 결제 10% 고고고 (최대 5만원)
-                      </p>
-                    </li>
-                    <li>
-                      <span class="smt-badge">혜택</span>
-                      <p class="smt-benefit-lst__txt">
-                        [신한카드] 결제, 10,000원 고고고
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <!-- //결제 혜택 .benefit-pay-sec -->
-
-                <!-- .discount-pop-sec -->
-                <div class="discount-pop-notice-sec">
-                  <p class="discount-pop-notice-tit">주문 유의사항</p>
-                  <p class="discount-pop-notice-txt">
-                    해당 고고고 혜택은 현재 시점에서 최대 혜택으로 적용
-                    되었으며, 결제 시점이 아닌 경우, 혜택가가 상이할 수
-                    있습니다.
-                  </p>
-                </div>
-                <!-- //.discount-pop-sec -->
-
-                <!-- .pop-fixed-bottom-area -->
-                <div class="pop-fixed-bottom-area">
-                  <!-- .bot-result-money -->
-                  <div class="bot-result-money">
-                    <div class="bot-result-money__left">
-                      <p class="bot-result-money__tit">ㄱㄷㄴㄷㄹ</p>
-                    </div>
-                    <div class="bot-result-money__right">
-                      <p class="bot-result-money__dollar">$70.11</p>
-
-                      <p class="bot-result-money_ko">
-                        <strong>96,500</strong><span>원</span>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- //.bot-result-money -->
-
-                  <!-- .bot-fixed-btn-wrap -->
-                  <div class="bot-fixed-btn-wrap">
-                    <button type="button" class="btn-bg-smt">회원가입</button>
-                  </div>
-                  <!--//.bot-fixed-btn-wrap -->
-                </div>
-                <!-- //.pop-fixed-bottom-area -->
-              </div>
-              <!-- //고고고내역 .discount-detail-wrap -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__header">로그인 안내</div>
+            <div class="smt-alert__cont">
+              <p>
+                <!-- 2024-07-17 문구 전체 변경 
+                                    동일아이디로 비밀번호 <strong>5회</strong> 이상 잘못 입력하셨습니다.비밀번호 찾기를 통해 비밀번호를 재설정하여 주시기 바랍니다. -->
+                동일 아이디로 비밀번호를 <strong>5회</strong> 이상 틀리면
+                로그인이 제한됩니다. <br />
+                비밀번호 찾기를 통해 재설정 해 주세요.
+              </p>
             </div>
-            <!-- //.smt-pop-cont__inner -->
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                아이디찾기
+              </button>
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                비밀번호찾기
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
           </div>
-          <!-- //.smt-pop-cont -->
-
-          <!-- .btn-close-smt-pop -->
-          <button type="button" class="btn-close-smt-pop js-smt-pop-close">
-            <span class="hide">팝업닫기</span>
-          </button>
-          <!-- //.btn-close-smt-pop -->
         </div>
-        <!-- //.smtpop-body -->
+        <!-- //.smt-alert -->
       </div>
       <!-- //.smt-pop__inner -->
     </div>
-    <!-- //.smt-pop -->
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop02">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <p>
+                현대면세점과 Airstar 멤버십 연동이 완료되었어요.스마트 면세
+                면세점에서 할인된 혜택을 즐겨보세요.
+              </p>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop02">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <p>
+                현대면세점과 에어스타 멤버십 연동이 완료됐어요!<br />
+                Airstar Duty Free 에서 다양한 할인혜택을 즐겨보세요.
+              </p>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop03">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <div class="smt-pop-notice">
+                <p>
+                  일치하는 회원정보가 없습니다.<br />고객센터로 문의해주세요.
+                </p>
+                <div class="smt-pop-noticbox">
+                  <a href="tel:1811-6688" class="smt-pop-noticbox__spot"
+                    >1811-6688</a
+                  >
+                  <p>상담시간 : 09:30~21:30</p>
+                </div>
+              </div>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop04">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <div class="smt-pop-notice">
+                <p>
+                  정상적인 회원정보가 아닙니다.<br />고객센터로 문의해주세요.
+                </p>
+                <div class="smt-pop-noticbox">
+                  <a href="tel:1811-6688" class="smt-pop-noticbox__spot"
+                    >1811-6688</a
+                  >
+                  <p>상담시간 : 09:30~21:30</p>
+                </div>
+              </div>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop04en">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <div class="smt-pop-notice">
+                <p>
+                  정상적인 회원정보가 아닙니다.<br />고객센터로 문의해주세요.
+                </p>
+                <div class="smt-pop-noticbox">
+                  <a href="tel:1811-6688" class="smt-pop-noticbox__spot"
+                    >+82(0)2-2163-6215</a
+                  >
+                  <p>상담시간 : 10:00~19:00(GMT +9)</p>
+                </div>
+              </div>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop04cn">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <div class="smt-pop-notice">
+                <p>
+                  정상적인 회원정보가 아닙니다.<br />고객센터로 문의해주세요.
+                </p>
+                <div class="smt-pop-noticbox">
+                  <a href="tel:1811-6688" class="smt-pop-noticbox__spot"
+                    >4001200362</a
+                  >
+                  <p>상담시간 : 10:00~19:00, KST</p>
+                </div>
+              </div>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
+
+    <!-- 알럿 팝업 (.js-smt-pop-wrap , 팝업 아이디 필수) -->
+    <div class="js-smt-pop-wrap smt-alert-pop" id="alertPop05">
+      <!-- .smt-pop__inner -->
+      <div class="smt-alert-pop__inner">
+        <!-- .smt-alert -->
+        <div class="smt-alert">
+          <div class="smt-alert__inner">
+            <div class="smt-alert__cont">
+              <div class="smt-pop-notice">
+                <p>이용 약관동의는 필수 항목입니다.</p>
+              </div>
+            </div>
+            <div class="smt-alert__btns">
+              <!-- .js-smt-pop-close 추가시 팝업 닫힘 -->
+              <button type="button" class="btn-bg-smt js-smt-pop-close">
+                확인
+              </button>
+              <!-- //.js-smt-pop-close 추가시 팝업 닫힘 -->
+            </div>
+          </div>
+        </div>
+        <!-- //.smt-alert -->
+      </div>
+      <!-- //.smt-pop__inner -->
+    </div>
+    <!-- //알럿 팝업 -->
     <!-- //팝업 -->
 
     <script>
-      $(document).ready(function () {
-        smtDutyPopup.smtOpenPop("paymentPop");
-      });
+      // $(document).ready(function(){
+      //     smtDutyPopup.smtOpenPop("alertPop05");
+      // });
     </script>
     <!-- //버튼 클릭 없이 팝업실행 예시 -->
 
-    <!-- <div
+    <div
       id="gridmanWrapper"
       style="
         position: fixed;
@@ -1587,7 +1408,7 @@
             class="z-[999999] fixed flex-c top-4 gap-1 text-white w-40 h-fit items-end right-4"
           ></div></div
       ></template>
-    </div> -->
+    </div>
   </body>
   <!-- 버튼 클릭 없이 팝업실행 예시 -->
 </html>

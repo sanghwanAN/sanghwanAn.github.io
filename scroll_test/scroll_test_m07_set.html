@@ -65,7 +65,7 @@
         left: 0;
         transform: translateY(0); /* 위치 조정 */
         will-change: transform;
-        transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+        /* transition: transform 0.3s ease-out, opacity 0.3s ease-out; */
         opacity: 1;
       }
       .stroe_date.hidden {
@@ -6027,11 +6027,10 @@
             // targetFixedEle.css("transform", "translateY(" + 61 + "px)");
             tabEle.addClass("stroe_date_fixed");
             clearTimeout(hideTimer);
-            targetFixedEle.removeClass("hidden");
           } else {
             clearTimeout(hideTimer);
             hideTimer = setTimeout(function () {
-              targetFixedEle.removeClass("fixed").addClass("hidden");
+              targetFixedEle.removeClass("fixed");
             }, 100); // 0.1초 지연
             tabEle.removeClass("stroe_date_fixed");
 

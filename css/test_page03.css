@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+.btn-border-smt:focus {
+  color: red !important;
+}
 /*********** s: 로그인 .smart-duty-login ***********/
 .smart-duty-login {
   position: relative;
