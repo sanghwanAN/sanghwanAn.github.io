@@ -1350,16 +1350,20 @@
   padding-bottom: 0;
 } /* 2004-07-03 운영에 맞춰 수정 */
 /* .order_hoeny_popup .od{padding: 0;} */ /* 2004-07-03 운영에 맞춰 수정 */
-.box-bottom-float.order_hoeny_popup .area-scroll {
-  padding-bottom: 0;
+.box-bottom-float.order_hoeny_popup .download-coupon {
   height: calc(100vh - 140px);
-} /* 스크롤 이슈 대응 2024-09-11 */
-.box-bottom-float.order_hoeny_popup .area-scroll .accumulated-money-list {
-  display: inline-block;
-  margin-bottom: 90px;
-  width: 100%;
-  border-bottom: 1px solid #fff;
+  position: relative;
 }
+.box-bottom-float.order_hoeny_popup .area-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 0;
+  height: calc(100% - 80px);
+  background: #eee;
+} /* 스크롤 이슈 대응 2024-09-11 */
+
 .order_hoeny_popup .radio_group .r_item label input[type="checkbox"] + .inner {
   /* background: red; */
 }
