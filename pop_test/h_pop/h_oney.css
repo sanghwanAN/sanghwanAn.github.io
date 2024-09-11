@@ -1359,6 +1359,8 @@
   padding-bottom: 48px;
 }
 .box-bottom-float.order_hoeny_popup .area-scroll {
+  padding-bottom: 0;
+  height: 90%;
 } /* 스크롤 이슈 대응 2024-09-11 */
 
 .order_hoeny_popup .radio_group .r_item label input[type="checkbox"] + .inner {
